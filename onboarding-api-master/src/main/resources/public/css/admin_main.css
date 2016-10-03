@@ -1,0 +1,25 @@
+.header {
+    background-color: #1bc7a5;
+    color: white;
+    height: 75px;
+}
+.header h3 {
+    padding-left: 15px;
+    margin-top: 20px;
+}
+.middle {
+    padding-top: 30px;
+    /*background: #ebebeb;*/
+}
+.middle a {
+    background-color: #1bc7a5;
+    padding: 20px;
+    color: white;
+
+}
+.middle a:hover {
+    text-decoration: none;
+    background-color: #dfdfdf;
+    color: #1bc7a5;
+}
+

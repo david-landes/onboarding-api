@@ -1,0 +1,25 @@
+.left-side {
+    /*border: 2px solid #34495e;*/
+    background-color: lightslategrey;
+    height: 25%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.header h3{
+    display: inline-block;
+}
+.header ul {
+    list-style: none;
+    font-size: 10px;
+    float: right;
+    padding: 20px 20px 0px 0px;
+}
+.left-side h5 {
+    color: white;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+img {
+    margin-top: 20px;
+    /*background-color: white;*/
+}
