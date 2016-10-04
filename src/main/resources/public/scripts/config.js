@@ -1,5 +1,5 @@
 (function(){
-    angular.module('onboardApp').factory('config', config);
+    angular.module('myApp').factory('config', config);
 
     function config() {
         return {

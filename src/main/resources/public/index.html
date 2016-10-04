@@ -3,8 +3,10 @@
 <html>
 <head>
 <title>OnboardApp</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-<!-- <script type="text/javascript" src="node_modules/angular/angular-resource/angular-resource.min.js"></script> -->
+    <script src=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+   	<script src="node_modules/angular-route/angular-route.min.js"></script>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/accountInfo.css">
@@ -15,7 +17,7 @@
 <link rel="stylesheet" href="css/left-side.css">
 
 </head>
-<body ng-app="onboardApp">
+<body ng-app="myApp">
 <div class="container">
     <div class="header clearfix">
         <div class="logo"></div>
@@ -36,51 +38,15 @@
         <a href="#/weekly">WEEKLY</a>
         <a href="#/ongoing">ONGOING</a>
         <a href="#/generalInfo">GENERAL INFO</a>
+        <a href="#/addUser">ADD USER</a>
         <div class="mainContent">
-            <ng-view></ng-view>
-         
-            <div ng-controller="myCtrl" style="margin-top: 50px;">
-				<h1>WELCOME TO THE DEV CENTER!</h1>
-				<ul class="list-group">
-				  <li class="list-group-item">{{greeting.firstName + " " + greeting.lastName}}</li>
-				  <li class="list-group-item">{{greeting.email}}</li>
-				  <li class="list-group-item">{{greeting.position.position}}</li>
-				  <li class="list-group-item">{{greeting.practice.practice}}</li>
-				</ul>
-			</div>
-            
-			<div class="input-group">
-			  <div class="input-group-btn">
-			    <!-- Buttons -->
-			    
-			  </div>
-			  <input type="text" class="form-control" aria-label="...">
-			</div>
-			<div class="input-group">
-			  <div class="input-group-btn">
-			    <!-- Buttons -->
-			    
-			  </div>
-			  <input type="text" class="form-control" aria-label="...">
-			</div>
-			<div class="input-group">
-			  <div class="input-group-btn">
-			    <!-- Buttons -->
-			    
-			  </div>
-			  <input type="text" class="form-control" aria-label="...">
-			</div>
-			<div class="input-group">
-			  <div class="input-group-btn">
-			    <!-- Buttons -->
-			    
-			  </div>
-			  <input type="text" class="form-control" aria-label="...">
-			</div>
-            
-        </div>
-    </div>
+          <ng-view></ng-view>
 
+        </div>
+        
+	</div>
+	
+	
     <div class="right-side col-lg-2">
         <h4 class="text-center">NOTIFICATIONS</h4>
         <div class="right-bar-icon">
@@ -230,10 +196,7 @@
 </div>
 <!-- <script type="text/javascript" src="node_modules/angular/angular.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="app.js"></script>
 <script src="scripts/app.js"></script>
-<script src="scripts/config.js"></script>
-<script src="scripts/users/user.service.js"></script>
 
 
 </body>
