@@ -23,3 +23,8 @@
     color: #1bc7a5;
 }
 
+.user-list th {
+	background-color: white;
+	color: black;
+	width: 20%;
+}

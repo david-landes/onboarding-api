@@ -25,11 +25,14 @@ var app = angular.module("myApp", ["ngRoute"])
                 templateUrl: "partials/generalInfo.html",
                 controller: "generalInfo"
             })
+            .when("/addUser", {
+                templateUrl: "partials/addUser.html",
+                controller: "addUser"
+            })
             .when("/users1", {
                 templateUrl: "partials/users1.html",
                 controller: "users1"
             });
-
     })
     .controller("dashboard", function ($scope) {
         $scope.message = "Dashboard"
@@ -48,4 +51,7 @@ var app = angular.module("myApp", ["ngRoute"])
     })
     .controller("generalInfo", function ($scope) {
         $scope.message = "General Info"
+    })
+    .controller("addUser", function ($scope) {
+        $scope.message = "Add User"
     });
