@@ -1,0 +1,23 @@
+.navbar-default {
+    background-color: white;
+    border: 3px solid #1bc7a5;
+    border-top: none;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+.navbar {
+    border-radius: 0px;
+}
+.btn-default {
+    background-color: #1bc7a5;
+    border-radius: 0px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 2px solid;
+    margin-bottom: 4px;
+}
+.btn-default:hover {
+    color: #1bc7a5;
+}

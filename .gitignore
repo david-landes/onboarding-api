@@ -52,3 +52,8 @@ local.properties
 
 # Maven
 .mvn/
+
+# IntelliJ crud
+.idea/
+onboarding.iml
+src/main/resources/public/.idea/
