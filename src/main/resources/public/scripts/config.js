@@ -1,3 +1,9 @@
-/**
- * Created by Josh Benson on 9/15/2016.
- */
+(function(){
+    angular.module('onboardApp').factory('config', config);
+
+    function config() {
+        return {
+            apiUrl: 'http://localhost:8080/'
+        }
+    }
+}());

@@ -14,6 +14,7 @@ import org.springframework.hateoas.ResourceAssembler;
 import org.springframework.hateoas.ResourceProcessor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,6 +24,7 @@ import com.stg.helpers.MailHelper;
 import com.stg.models.User;
 
 @BasePathAwareController
+@CrossOrigin
 @RequestMapping(value = "/users", produces = "application/json")
 public class Users implements ResourceProcessor<RepositorySearchesResource>, ResourceAssembler<User, Resource<User>> {
 
