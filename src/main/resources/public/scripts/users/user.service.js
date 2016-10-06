@@ -1,5 +1,5 @@
 (function() {
-    angular.module('onboardApp')
+    angular.module('myApp')
         .factory('users', userFactory);
 
     userFactory.$inject = ['$http', 'config'];
@@ -20,7 +20,7 @@
         }
 
         function createUser(user) {
-            return $http.post(config.apiUrl + 'users', user);
+            return $http.post(config.apiUrl + 'users/add-user', user);
         }
     }
 }());
