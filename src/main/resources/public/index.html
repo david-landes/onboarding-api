@@ -18,8 +18,8 @@
 
 </head>
 <body ng-app="myApp">
-<div class="container">
-    <div class="header clearfix">
+<div class="container main-container">
+    <div class="header">
         <div class="logo"></div>
         <h3>Onboarding App</h3>
         <ul>
@@ -27,18 +27,18 @@
         </ul>
     </div>
 
-    <div class="left-side col-lg-2 text-center">
+    <div class="left-side col-sm-2 text-center">
         <img src="images/owl.png">
         <h5>Kellie Bower</h5>
     </div>
 
-    <div class="middle col-lg-8">
+    <div class="middle col-sm-8">
         <a href="#/accountInfo">ACCOUNT INFO</a>
         <a href="#/dayOne">DAY ONE</a>
         <a href="#/weekly">WEEKLY</a>
         <a href="#/ongoing">ONGOING</a>
         <a href="#/generalInfo">GENERAL INFO</a>
-        <a href="#/addUser">ADD USER</a>
+        <a href="#/addUser" style="background-color: #c0392b;"><span class="glyphicon glyphicon-plus" style="color: #fff;"></span></a>
         <div class="mainContent">
           <ng-view></ng-view>
 
@@ -46,8 +46,7 @@
         
 	</div>
 	
-	
-    <div class="right-side col-lg-2">
+    <div class="right-side col-sm-2">
         <h4 class="text-center">NOTIFICATIONS</h4>
         <div class="right-bar-icon">
         </div>
@@ -197,6 +196,9 @@
 <!-- <script type="text/javascript" src="node_modules/angular/angular.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="scripts/app.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/users/addUser.controller.js"></script>
+<script src="scripts/users/user.service.js"></script>
 
 
 </body>

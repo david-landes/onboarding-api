@@ -9,11 +9,12 @@
 }
 .middle {
     padding-top: 30px;
+
     /*background: #ebebeb;*/
 }
 .middle a {
     background-color: #1bc7a5;
-    padding: 20px;
+    padding: 10px;
     color: white;
 
 }
