@@ -20,10 +20,14 @@ public class Positions {
     @Autowired
     private PositionDao positionDao;
 
+    /**
+     * Retrieves all of the different positions
+     *
+     * @return Iterable<Position>
+     */
     @RequestMapping(value = "", method = RequestMethod.GET)
     public HttpEntity<Iterable<Position>> getAllPositions() {
-	return new ResponseEntity<Iterable<Position>>(positionDao.findAll(),
-		HttpStatus.OK);
+	return new ResponseEntity<Iterable<Position>>(positionDao.findAll(), HttpStatus.OK);
     }
 
 }

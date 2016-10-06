@@ -1,11 +1,15 @@
 package com.stg.models;
 
+import java.util.Set;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -37,6 +41,14 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "practice_id")
     private Practice practice;
+
+    @RestResource(exported = true)
+    @OneToMany(mappedBy = "user")
+    private Set<Profile> profiles;
+
+    @RestResource(exported = false)
+    @Column(nullable = false, columnDefinition = "TINYINT", length = 1)
+    private boolean isWelcomed;
 
     public User() {
 
@@ -94,10 +106,25 @@ public class User {
 	this.practice = practice;
     }
 
+    public Set<Profile> getProfiles() {
+	return profiles;
+    }
+
+    public void setProfiles(Set<Profile> profiles) {
+	this.profiles = profiles;
+    }
+
+    public boolean isWelcomed() {
+	return isWelcomed;
+    }
+
+    public void setWelcomed(boolean isWelcomed) {
+	this.isWelcomed = isWelcomed;
+    }
+
     @Override
     public String toString() {
-	return "User [id=" + id + ", firstName=" + firstName + ", lastName="
-		+ lastName + ", email=" + email + ", position=" + position
-		+ ", practice=" + practice + "]";
+	return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", position=" + position + ", practice=" + practice + ", profiles="
+		+ profiles + ", isWelcomed=" + isWelcomed + "]";
     }
 }
