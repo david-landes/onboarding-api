@@ -62,7 +62,7 @@ public class Users implements ResourceProcessor<RepositorySearchesResource>, Res
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-    }
+    
 
     /**
      * Adds the new connection points for the API
