@@ -45,21 +45,22 @@ public class Users implements ResourceProcessor<RepositorySearchesResource>, Res
      */
     @RequestMapping(value = "/add-user", method = RequestMethod.POST)
     public ResponseEntity<Resource<User>> getAllUsers(@RequestBody NewUser newUser) throws Exception {
-	if ((newUser == null) || (newUser.getEmail() == null) || newUser.getEmail().trim().equals("")) {
-	    throw new InvalidParameterException("Must pass in email");
-	}
+		if ((newUser == null) || (newUser.getEmail() == null) || newUser.getEmail().trim().equals("")) {
+			throw new InvalidParameterException("Must pass in email");
+		}
 
-	// Create the user
-	User user = userService.createUser(newUser);
+		// Create the user
+		User user = userService.createUser(newUser);
 
-	// Send the response back to the client
-	try {
-	    Resource<User> resource = toResource(user);
-	    return new ResponseEntity<>(resource, HttpStatus.OK);
-	} catch (Exception e) {
-	    log.error("Failure in Users.getAllUsers", e);
+		// Send the response back to the client
+		try {
+			Resource<User> resource = toResource(user);
+			return new ResponseEntity<>(resource, HttpStatus.OK);
+		} catch (Exception e) {
+			log.error("Failure in Users.getAllUsers", e);
 
-	    return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 	}
 
     /**
