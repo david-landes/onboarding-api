@@ -11,10 +11,10 @@ import com.stg.controllers.TaskLabels;
 @Component
 public class ControllerResourceProcessor implements ResourceProcessor<RepositoryLinksResource> {
 
-    @Override
-    public RepositoryLinksResource process(RepositoryLinksResource resource) {
-	resource.add(ControllerLinkBuilder.linkTo(Practices.class).withRel("practices"));
-	resource.add(ControllerLinkBuilder.linkTo(TaskLabels.class).withRel("taskLabels"));
-	return resource;
-    }
+	@Override
+	public RepositoryLinksResource process(RepositoryLinksResource resource) {
+		resource.add(ControllerLinkBuilder.linkTo(Practices.class).withRel("practices"));
+		resource.add(ControllerLinkBuilder.linkTo(TaskLabels.class).withRel("taskLabels"));
+		return resource;
+	}
 }
